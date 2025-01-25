@@ -1,0 +1,171 @@
+.pt-sans-regular {
+  font-family: "PT Sans", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pt-sans-bold {
+  font-family: "PT Sans", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.pt-sans-regular-italic {
+  font-family: "PT Sans", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.pt-sans-bold-italic {
+  font-family: "PT Sans", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.montserrat-regular {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "PT Sans", serif;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f9;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  color: #3498db;
+  font-size: 2em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.gameButtons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  padding: 15px 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 2.5em;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+#reset {
+  font-size: 1.2em;
+  padding: 10px 15px;
+  background: #3498db;
+}
+
+.result {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin: 20px 0;
+  width: 80%;
+  max-width: 500px;
+}
+
+.result p {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.score {
+  background: white;
+  padding: 15px 30px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+#textOfResult {
+  transition: color 0.3s ease;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+/* Цвета для результатов */
+.win {
+  color: #2ecc71 !important;
+}
+.lose {
+  color: #e74c3c !important;
+}
+.draw {
+  color: #f1c40f !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.gameButtons button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none; /* Блокирует клики */
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.loader {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+  .gameButtons {
+    gap: 10px;
+  }
+
+  button {
+    font-size: 2.09em;
+    padding: 10px 20px;
+  }
+
+  .score {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}

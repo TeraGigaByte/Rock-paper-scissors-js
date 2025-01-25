@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Камень-Ножницы-Бумага</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h2>Камень-✂️-Бумага</h2>
+    <p>Выберите:</p>
+    <div class="gameButtons">
+      <button id="rock">🗿</button>
+      <button id="scissors">✂️</button>
+      <button id="paper">📃</button>
+    </div>
+    <div class="result">
+      <p id="waiting">🖥️ ожидает вашего хода... ⏳</p>
+      <p id="choicePlayer" hidden>
+        <span class="playerAvatar">😀</span> Вы выбрали:
+        <span id="playerChoice"></span>
+      </p>
+      <p id="thinking" hidden>🖥️ Думает...</p>
+      <p id="choice" hidden>
+        🖥️ Компьютер выбрал: <span id="computerChoice"></span>
+      </p>
+      <p id="text" hidden><span id="textOfResult"></span></p>
+    </div>
+    <div class="score">
+      <h3>Победы:</h3>
+      <span class="playerAvatar">😀</span>: <span id="playerWins"></span>
+      <p>🖥️: <span id="computerWins"></span></p>
+      <p>🤷‍♀️: <span id="draw"></span></p>
+      <button id="reset">🔄</button>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
